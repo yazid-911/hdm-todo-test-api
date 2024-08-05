@@ -1,18 +1,17 @@
 import { Injectable } from '@nestjs/common';
+import { Task } from '@prisma/client';
 import { UseCase } from '../../index';
 import SaveTaskDto from './SaveTaskDto';
 
 @Injectable()
-export default class SaveTaskUseCase
-  // @todo DO NOT USE any HERE, USE THE ENTITY THAT YOU SHOULD RETURN
-  implements UseCase<Promise<any>, [dto: SaveTaskDto]>
-{
+export default class SaveTaskUseCase implements UseCase<Promise<Task>, [dto: SaveTaskDto]> {
   constructor() {}
 
-  // @todo DO NOT USE any HERE, USE THE ENTITY THAT YOU SHOULD RETURN
-  async handle(dto: any) {
+  async handle(dto: SaveTaskDto) {
     /*
     * @todo IMPLEMENT HERE : VALIDATION DTO, DATA SAVING, ERROR CATCHING
      */
+
+    return null;
   }
 }
